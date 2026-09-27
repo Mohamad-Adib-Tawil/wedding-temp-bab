@@ -43,7 +43,7 @@ window.SITE_CONFIG = {
     "hashtag": "#محمد_ورزان",
     "contactLabel": "للتواصل والتأكيد",
     "contactName": "أبو محمد",
-    "contactPhone": "+9647700000000",
+    "contactPhone": "+963992688759",
     "dateKicker": "",
     "showDateKicker": true,
     "images": {},
@@ -84,9 +84,9 @@ window.SITE_CONFIG = {
     "brand": "https://halaheel.com",
     "create": "https://halaheel.com/go/create?ref=demo-bab",
     "instagram": "https://instagram.com/halaheeel",
-    "order": "https://halaheel.com/order?tpl=bab&occ=wedding",
+    "order": "https://wa.me/+963992688759",
     "youtubeMusicId": "Hp8WTVqR_0U",
-    "demoWhatsapp": "https://wa.me/9647811231116?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%F0%9F%91%8B%20%D8%B9%D8%AC%D8%A8%D9%86%D9%8A%20%D9%82%D8%A7%D9%84%D8%A8%20%C2%AB%D8%A8%D8%A7%D8%A8%20%D8%A7%D9%84%D9%81%D8%B1%D8%AD%C2%BB%20%D9%88%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A3%D8%B7%D9%84%D8%A8%20%D8%AF%D8%B9%D9%88%D8%A9%20%D8%A8%D9%8A%D9%87"
+    "demoWhatsapp": "https://wa.me/+963992688759"
   },
   "texts": {
     "title": "دعوة زفاف",
