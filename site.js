@@ -44,14 +44,12 @@
   googleUrl.search = new URLSearchParams({ action: 'TEMPLATE', text: calendarTitle, dates: `${dateCompact}/${endCompact}`, ctz: 'Asia/Baghdad', location: locationText, details: `رابط الدعوة: ${location.href.split('?')[0]}` }).toString();
   setHref('#googleCalendar', googleUrl.href);
   const apple = $('#appleCalendar');
-  if (apple) apple.addEventListener('click', (e) => {
-    e.preventDefault();
+  if (apple) {
     const escape = (v) => String(v).replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\n/g, '\\n');
     const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Wedding Invitation//AR', 'BEGIN:VEVENT', `UID:wedding-${dateCompact}@local`, `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '')}`, `DTSTART;TZID=Asia/Baghdad:${dateCompact}`, `DTEND;TZID=Asia/Baghdad:${endCompact}`, `SUMMARY:${escape(calendarTitle)}`, `LOCATION:${escape(locationText)}`, `DESCRIPTION:${escape(location.href.split('?')[0])}`, 'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
-    const objectUrl = URL.createObjectURL(new Blob([ics], { type: 'text/calendar;charset=utf-8' }));
-    const link = document.createElement('a'); link.href = objectUrl; link.download = 'wedding.ics'; link.click();
-    setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
-  });
+    apple.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar;charset=utf-8' }));
+    apple.download = 'wedding.ics';
+  }
   const form = $('#da3wa-rsvp-form');
   if (form) {
     let attendance = 'نعم'; let companions = 0;
