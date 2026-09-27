@@ -71,8 +71,8 @@
       const wish = form.elements.message.value.trim();
       const message = [`تأكيد حضور: ${calendarTitle}`, `الاسم: ${name}`, `الحضور: ${attendance}`, `عدد المرافقين: ${attendance === 'نعم' ? companions : 0}`, wish ? `التهنئة: ${wish}` : ''].filter(Boolean).join('\n');
       const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-      const opened = window.open(url, '_blank', 'noopener');
-      if (!opened) location.href = url;
+      const link = document.createElement('a');
+      link.href = url; link.target = '_blank'; link.rel = 'noopener'; link.click();
     });
   }
 })();

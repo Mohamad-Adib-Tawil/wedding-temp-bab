@@ -9,31 +9,7 @@
    القالب كي يسري قبل أن يصل هذا الملف المؤجَّل على شبكة بطيئة). */
 window.__da3waMusicManualStart = true;
 
-const WEDDING_CONFIG = (typeof window !== "undefined" && window.__INVITE__ && window.__INVITE__.config) || {
-  groom: "محمد", bride: "زينب",
-  date: "2026-11-20T19:00:00",
-  dateText: "يوم الجمعة، ٢٠ تشرين الثاني ٢٠٢٦",
-  timeText: "الساعة السابعة مساءً",
-  heroSub: "فتحنا باب فرحتنا… وطارت البشائر تدعوكم",
-  verse: "وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً",
-  invitationText: "بقلوبٍ مفعمةٍ بالفرح والسرور، نفتح لكم باب فرحتنا وندعوكم لمشاركتنا أجمل لحظات حياتنا في حفل زفافنا. حضوركم شرفٌ لنا وبهجةٌ تكتمل بها فرحتنا.",
-  groomParents: "نجل السيّد كريم عبد الله و السيّدة هدى",
-  brideParents: "كريمة السيّد سامي حسن و السيّدة رنا",
-  venueName: "قاعة بابل الكبرى", venueAddr: "بغداد — المنصور",
-  mapUrl: "https://www.google.com/maps/search/?api=1&query=Babylon+Hotel+Baghdad",
-  program: [
-    { time: "٧:٠٠ مساءً", title: "استقبال الضيوف" },
-    { time: "٧:٣٠ مساءً", title: "عقد القران" },
-    { time: "٩:٠٠ مساءً", title: "العشاء" },
-    { time: "١٠:٠٠ مساءً", title: "السهرة" },
-  ],
-  notes: ["يُرجى الحضور قبل الموعد بنصف ساعة", "الدعوة تشمل حاملها والعائلة الكريمة"],
-  closingNote: "حضوركم يفتح أبواب سعادتنا",
-  hashtag: "#محمد_وزينب",
-  contactLabel: "للتواصل والتأكيد", contactName: "أبو محمد", contactPhone: "+9647700000000",
-  closingFamilies: "عائلة عبد الله  &  عائلة حسن",
-  images: {},
-};
+const WEDDING_CONFIG = window.SITE_CONFIG.event;
 
 function setText(id, v) { const el = document.getElementById(id); if (el && v != null) el.textContent = v; }
 function toArabicDigits(s) { const ar = ["٠","١","٢","٣","٤","٥","٦","٧","٨","٩"]; return String(s).replace(/[0-9]/g, (d) => ar[+d]); }
