@@ -29,13 +29,13 @@
   if (brandCredit) brandCredit.firstChild.textContent = `${texts.brandCredit} `;
   const promoHeading = $('.dc-txt');
   if (promoHeading) promoHeading.firstChild.textContent = texts.promoHeading;
-  document.querySelectorAll('.cd__l').forEach((element, i) => { element.textContent = texts.countdownUnits[i]; });
-  document.querySelectorAll('#da3wa-att .pill').forEach((element, i) => { element.textContent = texts.rsvpAttendanceOptions[i]; });
+  document.querySelectorAll('.cd__l').forEach((element, i) => { element.textContent = texts.countdownUnits?.[i] ?? element.textContent; });
+  document.querySelectorAll('#da3wa-att .pill').forEach((element, i) => { element.textContent = texts.rsvpAttendanceOptions?.[i] ?? element.textContent; });
   const nameInput = formField('guest_name');
   if (nameInput) nameInput.placeholder = texts.rsvpNamePlaceholder;
   const wishInput = formField('message');
   if (wishInput) wishInput.placeholder = texts.rsvpWishPlaceholder;
-  window.SITE_CONFIG.wishes.forEach((wish, i) => {
+  (window.SITE_CONFIG.wishes || []).forEach((wish, i) => {
     const card = document.querySelectorAll('#da3wa-wish-list .wish')[i];
     if (!card) return;
     card.querySelector('.wish-av').textContent = wish.name.charAt(0);
