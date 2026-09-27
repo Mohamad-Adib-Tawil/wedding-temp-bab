@@ -81,9 +81,6 @@ window.SITE_CONFIG = {
   },
   "links": {
     "map": "https://www.google.com/maps/search/?api=1&query=Babylon+Hotel+Baghdad",
-    "brand": "https://halaheel.com",
-    "create": "https://halaheel.com/go/create?ref=demo-bab",
-    "instagram": "https://instagram.com/halaheeel",
     "order": "https://wa.me/+963992688759",
     "youtubeMusicId": "Hp8WTVqR_0U",
     "demoWhatsapp": "https://wa.me/+963992688759"
@@ -130,10 +127,6 @@ window.SITE_CONFIG = {
     "rsvpCompanionsLabel": "عدد المرافقين (عدا حضورك — ٠ إن كنت وحدك)",
     "rsvpWishLabel": "كلمة للعروسين 💌",
     "rsvpWishPlaceholder": "اكتب تهنئتك للعروسين...",
-    "brandCredit": "صُنع من خلال",
-    "brandName": "هلاهيل",
-    "brandCreate": "✨ اصنع دعوتك",
-    "brandCategories": "أعراس · خطوبة · أعياد ميلاد · مواليد",
     "promoHeading": "أعجبك قالب «باب الفرح»؟",
     "promoSubtitle": "اطلبه الآن وعدّله بنفسك فوراً بعد الطلب",
     "promoNote": "للعرض فقط — يختفي بعد الطلب",

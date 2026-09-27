@@ -20,13 +20,11 @@
   setText('#da3wa-rsvp-form .send', texts.rsvpSubmit);
   setText('.wishes-h h3', texts.wishesTitle);
   const labelSelectors = {
-    bismillah: '.bismillah', invitationHeading: '.invitation .sec__title', groomParentsHeading: '.families .family:first-child .family__label', brideParentsHeading: '.families .family:last-child .family__label', countdownHeading: '.count .sec__title', countdownArrived: '#cdArrived', programHeading: '.program .sec__title', venueHeading: '.venue .sec__title', notesHeading: '.notes .sec__title', importantNoteHeading: '.hn-kick', importantNote: '.hn-text', calendarCaption: '.cal-cap', googleCalendar: '#googleCalendar', appleCalendar: '#appleCalendar', rsvpNameLabel: '#da3wa-rsvp-form label:nth-of-type(1)', rsvpAttendanceLabel: '#da3wa-rsvp-form label:nth-of-type(2)', rsvpCompanionsLabel: '#da3wa-rsvp-form label:nth-of-type(3)', rsvpWishLabel: '#da3wa-rsvp-form label:nth-of-type(4)', brandName: '.credit-made a', brandCreate: '.credit-cta', brandCategories: '.credit-tag', promoSubtitle: '.dc-txt small:first-child', promoNote: '.dc-note', promoOrder: '.dc-order'
+    bismillah: '.bismillah', invitationHeading: '.invitation .sec__title', groomParentsHeading: '.families .family:first-child .family__label', brideParentsHeading: '.families .family:last-child .family__label', countdownHeading: '.count .sec__title', countdownArrived: '#cdArrived', programHeading: '.program .sec__title', venueHeading: '.venue .sec__title', notesHeading: '.notes .sec__title', importantNoteHeading: '.hn-kick', importantNote: '.hn-text', calendarCaption: '.cal-cap', googleCalendar: '#googleCalendar', appleCalendar: '#appleCalendar', rsvpNameLabel: '#da3wa-rsvp-form label:nth-of-type(1)', rsvpAttendanceLabel: '#da3wa-rsvp-form label:nth-of-type(2)', rsvpCompanionsLabel: '#da3wa-rsvp-form label:nth-of-type(3)', rsvpWishLabel: '#da3wa-rsvp-form label:nth-of-type(4)', promoSubtitle: '.dc-txt small:first-child', promoNote: '.dc-note', promoOrder: '.dc-order'
   };
   for (const [key, selector] of Object.entries(labelSelectors)) setText(selector, texts[key]);
   const mapButton = $('#mapBtn');
   if (mapButton) mapButton.lastChild.textContent = ` ${texts.mapButton}`;
-  const brandCredit = $('.credit-made');
-  if (brandCredit) brandCredit.firstChild.textContent = `${texts.brandCredit} `;
   const promoHeading = $('.dc-txt');
   if (promoHeading) promoHeading.firstChild.textContent = texts.promoHeading;
   document.querySelectorAll('.cd__l').forEach((element, i) => { element.textContent = texts.countdownUnits?.[i] ?? element.textContent; });
@@ -42,9 +40,6 @@
     card.querySelector('.wish-name').textContent = wish.name;
     card.querySelector('.wish-msg').textContent = wish.message;
   });
-  setHref('.credit-made a', links.brand);
-  setHref('.credit-cta', links.create);
-  setHref('.credit-ig', links.instagram);
   setHref('.dc-wa', links.demoWhatsapp);
   setHref('.dc-order', links.order);
   const videoAssets = [['#doorVid', assets.doorPoster, assets.doorVideo], ['#heroVid', assets.heroPoster, assets.heroVideo]];
