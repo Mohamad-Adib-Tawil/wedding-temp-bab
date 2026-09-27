@@ -109,7 +109,7 @@ function buildContact(c) {
   const link = document.getElementById("contactLink"); const label = document.querySelector(".contact__label");
   if (label && c.contactLabel) label.textContent = c.contactLabel; if (!link) return;
   const wa = (c.contactPhone || "").replace(/[^0-9]/g, "");
-  if (wa) { link.href = `https://wa.me/${wa}`; link.target = "_blank"; link.rel = "noopener";
+  if (wa) { link.href = window.SITE_CONFIG.links.order; link.target = "_blank"; link.rel = "noopener";
     link.innerHTML = `<span aria-hidden="true">&#9742;</span> `; link.appendChild(document.createTextNode(c.contactName ? c.contactName : c.contactPhone)); }
   else { const box = document.getElementById("contactBox"); if (box) box.style.display = "none"; }
 }

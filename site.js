@@ -87,13 +87,14 @@
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       if (!form.reportValidity()) return;
-      const phone = String(event.contactPhone || '').replace(/\D/g, '');
       const error = $('#da3wa-err');
-      if (!phone) { if (error) error.textContent = 'رقم التواصل غير متاح حاليًا'; return; }
+      if (!event.contactPhone) { if (error) error.textContent = 'رقم التواصل غير متاح حاليًا'; return; }
       const name = form.elements.guest_name.value.trim();
       const wish = form.elements.message.value.trim();
       const message = [`تأكيد حضور: ${calendarTitle}`, `الاسم: ${name}`, `الحضور: ${attendance}`, `عدد المرافقين: ${attendance === 'نعم' ? companions : 0}`, wish ? `التهنئة: ${wish}` : ''].filter(Boolean).join('\n');
-      const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+      const whatsappUrl = new URL(links.order);
+      whatsappUrl.searchParams.set('text', message);
+      const url = whatsappUrl.href;
       const link = document.createElement('a');
       link.href = url; link.target = '_blank'; link.rel = 'noopener'; link.click();
     });
