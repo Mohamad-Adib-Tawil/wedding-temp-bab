@@ -85,7 +85,8 @@ window.SITE_CONFIG = {
     "create": "https://halaheel.com/go/create?ref=demo-bab",
     "instagram": "https://instagram.com/halaheeel",
     "order": "https://halaheel.com/order?tpl=bab&occ=wedding",
-    "youtubeMusicId": "Hp8WTVqR_0U"
+    "youtubeMusicId": "Hp8WTVqR_0U",
+    "demoWhatsapp": "https://wa.me/9647811231116?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%F0%9F%91%8B%20%D8%B9%D8%AC%D8%A8%D9%86%D9%8A%20%D9%82%D8%A7%D9%84%D8%A8%20%C2%AB%D8%A8%D8%A7%D8%A8%20%D8%A7%D9%84%D9%81%D8%B1%D8%AD%C2%BB%20%D9%88%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A3%D8%B7%D9%84%D8%A8%20%D8%AF%D8%B9%D9%88%D8%A9%20%D8%A8%D9%8A%D9%87"
   },
   "texts": {
     "title": "دعوة زفاف",
@@ -96,7 +97,69 @@ window.SITE_CONFIG = {
     "rsvpSubtitle": "يسعدنا تأكيد حضوركم",
     "rsvpSubmit": "إرسال التأكيد",
     "rsvpDelivery": "يُفتح واتساب لإرسال التأكيد إلى رقم التواصل الموجود في الدعوة.",
-    "wishesTitle": "كلمات المهنّئين ✿"
-  }
+    "wishesTitle": "كلمات المهنّئين ✿",
+    "bismillah": "بسم الله الرحمن الرحيم",
+    "invitationHeading": "بطاقة دعوة",
+    "groomParentsHeading": "والدا العريس",
+    "brideParentsHeading": "والدا العروس",
+    "countdownHeading": "باقٍ على فرحنا",
+    "countdownUnits": [
+      "يوم",
+      "ساعة",
+      "دقيقة",
+      "ثانية"
+    ],
+    "countdownArrived": "حلّ يوم الفرح — نراكم الليلة 💜",
+    "programHeading": "برنامج الحفل",
+    "venueHeading": "مكان الحفل",
+    "mapButton": "الموقع على الخريطة",
+    "notesHeading": "تنويهات",
+    "importantNoteHeading": "تنويهٌ مهم",
+    "importantNote": "جنة الأطفال منازلهم 🏠",
+    "calendarCaption": "📲 أضِف الموعد إلى تقويم هاتفك بضغطة",
+    "googleCalendar": "تقويم جوجل",
+    "appleCalendar": "تقويم آيفون",
+    "rsvpNameLabel": "الاسم الكريم",
+    "rsvpNamePlaceholder": "اسمك",
+    "rsvpAttendanceLabel": "هل ستحضر؟",
+    "rsvpAttendanceOptions": [
+      "نعم",
+      "لا",
+      "ربما"
+    ],
+    "rsvpCompanionsLabel": "عدد المرافقين (عدا حضورك — ٠ إن كنت وحدك)",
+    "rsvpWishLabel": "كلمة للعروسين 💌",
+    "rsvpWishPlaceholder": "اكتب تهنئتك للعروسين...",
+    "brandCredit": "صُنع من خلال",
+    "brandName": "هلاهيل",
+    "brandCreate": "✨ اصنع دعوتك",
+    "brandCategories": "أعراس · خطوبة · أعياد ميلاد · مواليد",
+    "promoHeading": "أعجبك قالب «باب الفرح»؟",
+    "promoSubtitle": "اطلبه الآن وعدّله بنفسك فوراً بعد الطلب",
+    "promoNote": "للعرض فقط — يختفي بعد الطلب",
+    "promoOrder": "اطلبه 🎉"
+  },
+  "wishes": [
+    {
+      "name": "أم محمد",
+      "message": "ألف مبروك 🤍 بالرفاه والبنين إن شاء الله، فرحتكم فرحتنا"
+    },
+    {
+      "name": "سارة",
+      "message": "عقبال ما نفرح بيكم بأحلى المناسبات، دعوة بغاية الذوق 😍"
+    },
+    {
+      "name": "حيدر",
+      "message": "مبارك الزواج، الله يجعل أيامكم كلها أفراح"
+    },
+    {
+      "name": "نور الهدى",
+      "message": "بيت جديد عامر بالمحبة إن شاء الله، ألف مبروك"
+    },
+    {
+      "name": "أبو علي",
+      "message": "الله يبارك لكما ويبارك عليكما ويجمع بينكما في خير"
+    }
+  ]
 };
 window.__INVITE__ = {config: window.SITE_CONFIG.event};

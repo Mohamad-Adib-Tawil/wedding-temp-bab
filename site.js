@@ -3,6 +3,7 @@
   const $ = (selector) => document.querySelector(selector);
   const setText = (selector, value) => { const element = $(selector); if (element && value != null) element.textContent = value; };
   const setHref = (selector, value) => { const element = $(selector); if (element && value) element.href = value; };
+  const formField = (name) => document.querySelector(`#da3wa-rsvp-form [name="${name}"]`);
   const fullName = `${names.groomArabic} & ${names.brideArabic}`;
   const description = `${event.dateText} • ${event.venueName}`;
   document.title = `${texts.title} ${fullName}`;
@@ -18,9 +19,33 @@
   setText('#rsvpDelivery', texts.rsvpDelivery);
   setText('#da3wa-rsvp-form .send', texts.rsvpSubmit);
   setText('.wishes-h h3', texts.wishesTitle);
+  const labelSelectors = {
+    bismillah: '.bismillah', invitationHeading: '.invitation .sec__title', groomParentsHeading: '.families .family:first-child .family__label', brideParentsHeading: '.families .family:last-child .family__label', countdownHeading: '.count .sec__title', countdownArrived: '#cdArrived', programHeading: '.program .sec__title', venueHeading: '.venue .sec__title', notesHeading: '.notes .sec__title', importantNoteHeading: '.hn-kick', importantNote: '.hn-text', calendarCaption: '.cal-cap', googleCalendar: '#googleCalendar', appleCalendar: '#appleCalendar', rsvpNameLabel: '#da3wa-rsvp-form label:nth-of-type(1)', rsvpAttendanceLabel: '#da3wa-rsvp-form label:nth-of-type(2)', rsvpCompanionsLabel: '#da3wa-rsvp-form label:nth-of-type(3)', rsvpWishLabel: '#da3wa-rsvp-form label:nth-of-type(4)', brandName: '.credit-made a', brandCreate: '.credit-cta', brandCategories: '.credit-tag', promoSubtitle: '.dc-txt small:first-child', promoNote: '.dc-note', promoOrder: '.dc-order'
+  };
+  for (const [key, selector] of Object.entries(labelSelectors)) setText(selector, texts[key]);
+  const mapButton = $('#mapBtn');
+  if (mapButton) mapButton.lastChild.textContent = ` ${texts.mapButton}`;
+  const brandCredit = $('.credit-made');
+  if (brandCredit) brandCredit.firstChild.textContent = `${texts.brandCredit} `;
+  const promoHeading = $('.dc-txt');
+  if (promoHeading) promoHeading.firstChild.textContent = texts.promoHeading;
+  document.querySelectorAll('.cd__l').forEach((element, i) => { element.textContent = texts.countdownUnits[i]; });
+  document.querySelectorAll('#da3wa-att .pill').forEach((element, i) => { element.textContent = texts.rsvpAttendanceOptions[i]; });
+  const nameInput = formField('guest_name');
+  if (nameInput) nameInput.placeholder = texts.rsvpNamePlaceholder;
+  const wishInput = formField('message');
+  if (wishInput) wishInput.placeholder = texts.rsvpWishPlaceholder;
+  window.SITE_CONFIG.wishes.forEach((wish, i) => {
+    const card = document.querySelectorAll('#da3wa-wish-list .wish')[i];
+    if (!card) return;
+    card.querySelector('.wish-av').textContent = wish.name.charAt(0);
+    card.querySelector('.wish-name').textContent = wish.name;
+    card.querySelector('.wish-msg').textContent = wish.message;
+  });
   setHref('.credit-made a', links.brand);
   setHref('.credit-cta', links.create);
   setHref('.credit-ig', links.instagram);
+  setHref('.dc-wa', links.demoWhatsapp);
   setHref('.dc-order', links.order);
   const videoAssets = [['#doorVid', assets.doorPoster, assets.doorVideo], ['#heroVid', assets.heroPoster, assets.heroVideo]];
   for (const [selector, poster, source] of videoAssets) {
